@@ -1,0 +1,218 @@
+[ {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 3,
+    "attackDamage" : 6,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 4,
+    "colors" : [ "Orange", "Red", "Black" ],
+    "name" : "The Ripper"
+  },
+  "x" : 1,
+  "y" : 0
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 1,
+    "attackDamage" : 3,
+    "description" : "Premium card: Fear him. Your last breath is now.",
+    "health" : 1,
+    "colors" : [ "Red", "Blue", "Pink" ],
+    "name" : "Berserker"
+  },
+  "x" : 3,
+  "y" : 0
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 1,
+    "attackDamage" : 3,
+    "description" : "Premium card: Fear him. Your last breath is now.",
+    "health" : 1,
+    "colors" : [ "Red", "Blue", "Pink" ],
+    "name" : "Berserker"
+  },
+  "x" : 3,
+  "y" : 0
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 3,
+    "attackDamage" : 6,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 4,
+    "colors" : [ "Orange", "Red", "Black" ],
+    "name" : "The Ripper"
+  },
+  "x" : 1,
+  "y" : 0
+}, {
+  "command" : "useHeroAbility",
+  "affectedRow" : 3,
+  "error" : "Selected row does not belong to the enemy."
+}, {
+  "command" : "useHeroAbility",
+  "affectedRow" : 0,
+  "error" : "Not enough mana to use hero's ability."
+}, {
+  "command" : "useHeroAbility",
+  "affectedRow" : 1,
+  "error" : "Selected row does not belong to the enemy."
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ {
+    "mana" : 1,
+    "attackDamage" : 3,
+    "description" : "Premium card: Fear him. Your last breath is now.",
+    "health" : 1,
+    "colors" : [ "Red", "Blue", "Pink" ],
+    "name" : "Berserker"
+  } ]
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ {
+    "mana" : 3,
+    "attackDamage" : 6,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 3,
+    "colors" : [ "Orange", "Red", "Black" ],
+    "name" : "The Ripper"
+  }, {
+    "mana" : 4,
+    "attackDamage" : 4,
+    "description" : "Standard card: When he is near, close your eyes. They betray your mind.",
+    "health" : 4,
+    "colors" : [ "Yellow", "Orange", "Red" ],
+    "name" : "Miraj"
+  }, {
+    "mana" : 4,
+    "attackDamage" : 5,
+    "description" : "Standard card: Death incarnate. No better time to die than now.",
+    "health" : 4,
+    "colors" : [ "Orange", "Red", "Black" ],
+    "name" : "The Ripper"
+  }, {
+    "mana" : 4,
+    "attackDamage" : 6,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 4,
+    "colors" : [ "Orange", "Red", "Black" ],
+    "name" : "The Ripper"
+  }, {
+    "mana" : 4,
+    "attackDamage" : 5,
+    "description" : "Standard card: Death incarnate. No better time to die than now.",
+    "health" : 3,
+    "colors" : [ "Black", "Yellow" ],
+    "name" : "The Ripper"
+  } ]
+}, {
+  "command" : "useHeroAbility",
+  "affectedRow" : 2,
+  "error" : "Hero has already attacked this turn."
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 2,
+  "output" : 8
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 1,
+  "output" : 5
+}, {
+  "command" : "getCardsOnTable",
+  "output" : [ [ {
+    "mana" : 2,
+    "attackDamage" : 0,
+    "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
+    "health" : 2,
+    "colors" : [ "Yellow", "White" ],
+    "name" : "Disciple"
+  }, {
+    "mana" : 2,
+    "attackDamage" : 2,
+    "description" : "Standard card: A drink can always be served, with the blood of his enemies.",
+    "health" : 2,
+    "colors" : [ "Red", "Blue", "Pink" ],
+    "name" : "Berserker"
+  } ], [ {
+    "mana" : 3,
+    "attackDamage" : 6,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 4,
+    "colors" : [ "Orange", "Red", "Black" ],
+    "name" : "The Ripper"
+  }, {
+    "mana" : 4,
+    "attackDamage" : 5,
+    "description" : "Standard card: Death incarnate. No better time to die than now.",
+    "health" : 4,
+    "colors" : [ "Black", "Yellow" ],
+    "name" : "The Ripper"
+  } ], [ {
+    "mana" : 3,
+    "attackDamage" : 6,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 3,
+    "colors" : [ "Orange", "Red", "Black" ],
+    "name" : "The Ripper"
+  }, {
+    "mana" : 4,
+    "attackDamage" : 4,
+    "description" : "Standard card: When he is near, close your eyes. They betray your mind.",
+    "health" : 4,
+    "colors" : [ "Yellow", "Orange", "Red" ],
+    "name" : "Miraj"
+  }, {
+    "mana" : 4,
+    "attackDamage" : 5,
+    "description" : "Standard card: Death incarnate. No better time to die than now.",
+    "health" : 4,
+    "colors" : [ "Orange", "Red", "Black" ],
+    "name" : "The Ripper"
+  }, {
+    "mana" : 4,
+    "attackDamage" : 6,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 4,
+    "colors" : [ "Orange", "Red", "Black" ],
+    "name" : "The Ripper"
+  }, {
+    "mana" : 4,
+    "attackDamage" : 5,
+    "description" : "Standard card: Death incarnate. No better time to die than now.",
+    "health" : 3,
+    "colors" : [ "Black", "Yellow" ],
+    "name" : "The Ripper"
+  } ], [ {
+    "mana" : 1,
+    "attackDamage" : 3,
+    "description" : "Premium card: Fear him. Your last breath is now.",
+    "health" : 1,
+    "colors" : [ "Red", "Blue", "Pink" ],
+    "name" : "Berserker"
+  }, {
+    "mana" : 2,
+    "attackDamage" : 3,
+    "description" : "Premium card: Fear him. Your last breath is now.",
+    "health" : 2,
+    "colors" : [ "Red", "Blue", "Pink" ],
+    "name" : "Berserker"
+  } ] ]
+}, {
+  "command" : "getCardsInHand",
+  "playerIdx" : 2,
+  "output" : [ ]
+}, {
+  "command" : "getCardsInHand",
+  "playerIdx" : 1,
+  "output" : [ ]
+} ]

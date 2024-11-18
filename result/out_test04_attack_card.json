@@ -1,0 +1,140 @@
+[ {
+  "command" : "getCardsInHand",
+  "playerIdx" : 1,
+  "output" : [ {
+    "mana" : 2,
+    "attackDamage" : 3,
+    "description" : "Standard card: He has seen everything, his mind has never been asleep since the making of the realm.",
+    "health" : 6,
+    "colors" : [ "Black", "White", "Green" ],
+    "name" : "Warden"
+  }, {
+    "mana" : 4,
+    "attackDamage" : 5,
+    "description" : "Standard card: When he is near, close your eyes. They betray your mind.",
+    "health" : 4,
+    "colors" : [ "Yellow", "Orange", "Red" ],
+    "name" : "Miraj"
+  } ]
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 1,
+  "output" : 3
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 2,
+  "output" : 3
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 1,
+  "output" : 1
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 2
+}, {
+  "command" : "getCardsOnTable",
+  "output" : [ [ ], [ ], [ {
+    "mana" : 3,
+    "attackDamage" : 3,
+    "description" : "Premium card: You shall not pass, you shall not prevail, you shall perish.",
+    "health" : 3,
+    "colors" : [ "Black", "White", "Green" ],
+    "name" : "Warden"
+  }, {
+    "mana" : 2,
+    "attackDamage" : 3,
+    "description" : "Standard card: He has seen everything, his mind has never been asleep since the making of the realm.",
+    "health" : 6,
+    "colors" : [ "Black", "White", "Green" ],
+    "name" : "Warden"
+  } ], [ ] ]
+}, {
+  "command" : "getCardsInHand",
+  "playerIdx" : 2,
+  "output" : [ {
+    "mana" : 5,
+    "attackDamage" : 5,
+    "description" : "Standard card: When he is near, close your eyes. They betray your mind.",
+    "health" : 3,
+    "colors" : [ "Red", "Black" ],
+    "name" : "Miraj"
+  } ]
+}, {
+  "command" : "getCardsInHand",
+  "playerIdx" : 1,
+  "output" : [ {
+    "mana" : 4,
+    "attackDamage" : 5,
+    "description" : "Standard card: When he is near, close your eyes. They betray your mind.",
+    "health" : 4,
+    "colors" : [ "Yellow", "Orange", "Red" ],
+    "name" : "Miraj"
+  } ]
+}, {
+  "command" : "getPlayerDeck",
+  "playerIdx" : 2,
+  "output" : [ {
+    "mana" : 1,
+    "attackDamage" : 3,
+    "description" : "Premium card: Fear him. Your last breath is now.",
+    "health" : 1,
+    "colors" : [ "Purple", "Yellow" ],
+    "name" : "Berserker"
+  }, {
+    "mana" : 2,
+    "attackDamage" : 0,
+    "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
+    "health" : 2,
+    "colors" : [ "Green", "Yellow", "Blue" ],
+    "name" : "Disciple"
+  }, {
+    "mana" : 1,
+    "attackDamage" : 3,
+    "description" : "Premium card: Fear him. Your last breath is now.",
+    "health" : 1,
+    "colors" : [ "Red", "Blue", "Pink" ],
+    "name" : "Berserker"
+  }, {
+    "mana" : 3,
+    "attackDamage" : 6,
+    "description" : "Standard card: Death incarnate. No better time to die than now.",
+    "health" : 3,
+    "colors" : [ "Black", "Yellow" ],
+    "name" : "The Ripper"
+  } ]
+}, {
+  "command" : "getPlayerDeck",
+  "playerIdx" : 1,
+  "output" : [ {
+    "mana" : 4,
+    "attackDamage" : 5,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 3,
+    "colors" : [ "Black", "Yellow" ],
+    "name" : "The Ripper"
+  }, {
+    "mana" : 2,
+    "attackDamage" : 0,
+    "description" : "Standard card: Thrown from the highest cliff, revenge will be his glory.",
+    "health" : 1,
+    "colors" : [ "Black", "White", "Red" ],
+    "name" : "The Cursed One"
+  }, {
+    "mana" : 2,
+    "attackDamage" : 3,
+    "description" : "Premium card: You shall not pass, you shall not prevail, you shall perish.",
+    "health" : 6,
+    "colors" : [ "Black", "White", "Green" ],
+    "name" : "Warden"
+  }, {
+    "mana" : 2,
+    "attackDamage" : 3,
+    "description" : "Standard card: He has seen everything, his mind has never been asleep since the making of the realm.",
+    "health" : 6,
+    "colors" : [ "Brown", "Blue" ],
+    "name" : "Warden"
+  } ]
+} ]

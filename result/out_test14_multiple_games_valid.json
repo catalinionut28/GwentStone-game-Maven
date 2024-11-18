@@ -1,0 +1,850 @@
+[ {
+  "command" : "getPlayerTurn",
+  "output" : 2
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 1,
+  "output" : 1
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 2,
+    "attackDamage" : 4,
+    "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
+    "health" : 7,
+    "colors" : [ "Red", "Purple" ],
+    "name" : "Goliath"
+  },
+  "x" : 2,
+  "y" : 0
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 2,
+  "output" : 0
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 1,
+  "output" : 1
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 2
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 2,
+  "output" : 1
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 2,
+    "attackDamage" : 4,
+    "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
+    "health" : 7,
+    "colors" : [ "Red", "Purple" ],
+    "name" : "Goliath"
+  },
+  "x" : 2,
+  "y" : 0
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 1,
+  "output" : 4
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 1,
+    "attackDamage" : 0,
+    "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
+    "health" : 4,
+    "colors" : [ "Green", "Yellow", "Blue" ],
+    "name" : "Disciple"
+  },
+  "x" : 0,
+  "y" : 0
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 2
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 2,
+  "output" : 8
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 2,
+    "attackDamage" : 5,
+    "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
+    "health" : 7,
+    "colors" : [ "Red", "Purple" ],
+    "name" : "Goliath"
+  },
+  "x" : 2,
+  "y" : 0
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 2,
+    "attackDamage" : 5,
+    "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
+    "health" : 7,
+    "colors" : [ "Red", "Purple" ],
+    "name" : "Goliath"
+  },
+  "x" : 2,
+  "y" : 0
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 1,
+    "attackDamage" : 0,
+    "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
+    "health" : 6,
+    "colors" : [ "Green", "Yellow", "Blue" ],
+    "name" : "Disciple"
+  },
+  "x" : 0,
+  "y" : 0
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 2,
+  "output" : 15
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 2,
+    "attackDamage" : 4,
+    "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
+    "health" : 7,
+    "colors" : [ "Red", "Purple" ],
+    "name" : "Goliath"
+  },
+  "x" : 2,
+  "y" : 0
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 1,
+  "output" : 14
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 1,
+    "attackDamage" : 0,
+    "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
+    "health" : 6,
+    "colors" : [ "Green", "Yellow", "Blue" ],
+    "name" : "Disciple"
+  },
+  "x" : 0,
+  "y" : 0
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 1,
+  "output" : 18
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 1,
+    "attackDamage" : 0,
+    "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
+    "health" : 6,
+    "colors" : [ "Green", "Yellow", "Blue" ],
+    "name" : "Disciple"
+  },
+  "x" : 0,
+  "y" : 0
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 2
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 1,
+  "output" : 28
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 2,
+  "output" : 39
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 2
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 2,
+  "output" : 57
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 1,
+    "attackDamage" : 0,
+    "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
+    "health" : 8,
+    "colors" : [ "Green", "Yellow", "Blue" ],
+    "name" : "Disciple"
+  },
+  "x" : 0,
+  "y" : 0
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 2,
+  "output" : 67
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "gameEnded" : "Player one killed the enemy hero."
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 1,
+  "output" : 62
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 2,
+  "output" : 67
+}, {
+  "command" : "getCardsOnTable",
+  "output" : [ [ {
+    "mana" : 1,
+    "attackDamage" : 0,
+    "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
+    "health" : 8,
+    "colors" : [ "Green", "Yellow", "Blue" ],
+    "name" : "Disciple"
+  }, {
+    "mana" : 1,
+    "attackDamage" : 6,
+    "description" : "Premium card: Fear him. Your last breath is now.",
+    "health" : 5,
+    "colors" : [ "Purple", "Yellow" ],
+    "name" : "Berserker"
+  }, {
+    "mana" : 1,
+    "attackDamage" : 6,
+    "description" : "Premium card: Fear him. Your last breath is now.",
+    "health" : 6,
+    "colors" : [ "Red", "Blue", "Pink" ],
+    "name" : "Berserker"
+  }, {
+    "mana" : 1,
+    "attackDamage" : 0,
+    "description" : "Premium card: The will of Gods has been spoken, obey and you shall be saved...or not.",
+    "health" : 7,
+    "colors" : [ "Green", "Yellow", "Blue" ],
+    "name" : "Disciple"
+  }, {
+    "mana" : 1,
+    "attackDamage" : 0,
+    "description" : "Premium card: Nobody suspects an outcast, not even the Gods.",
+    "health" : 3,
+    "colors" : [ "Black", "White", "Red" ],
+    "name" : "The Cursed One"
+  } ], [ {
+    "mana" : 2,
+    "attackDamage" : 3,
+    "description" : "Standard card: Death incarnate. No better time to die than now.",
+    "health" : 10,
+    "colors" : [ "Orange", "Red", "Black" ],
+    "name" : "The Ripper"
+  }, {
+    "mana" : 1,
+    "attackDamage" : 5,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 5,
+    "colors" : [ "Orange", "Red", "Black" ],
+    "name" : "The Ripper"
+  } ], [ {
+    "mana" : 2,
+    "attackDamage" : 5,
+    "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
+    "health" : 7,
+    "colors" : [ "Red", "Purple" ],
+    "name" : "Goliath"
+  }, {
+    "mana" : 1,
+    "attackDamage" : 5,
+    "description" : "Standard card: He has seen everything, his mind has never been asleep since the making of the realm.",
+    "health" : 7,
+    "colors" : [ "Brown", "Blue" ],
+    "name" : "Warden"
+  }, {
+    "mana" : 1,
+    "attackDamage" : 7,
+    "description" : "Standard card: Death incarnate. No better time to die than now.",
+    "health" : 3,
+    "colors" : [ "Orange", "Red", "Black" ],
+    "name" : "The Ripper"
+  } ], [ {
+    "mana" : 1,
+    "attackDamage" : 3,
+    "description" : "Premium card: Nobody suspects an outcast, not even the Gods.",
+    "health" : 3,
+    "colors" : [ "Pink", "Purple" ],
+    "name" : "The Cursed One"
+  }, {
+    "mana" : 2,
+    "attackDamage" : 3,
+    "description" : "Premium card: Nobody suspects an outcast, not even the Gods.",
+    "health" : 1,
+    "colors" : [ "Black", "White", "Red" ],
+    "name" : "The Cursed One"
+  }, {
+    "mana" : 2,
+    "attackDamage" : 3,
+    "description" : "Premium card: Nobody suspects an outcast, not even the Gods.",
+    "health" : 1,
+    "colors" : [ "Black", "White", "Red" ],
+    "name" : "The Cursed One"
+  }, {
+    "mana" : 2,
+    "attackDamage" : 2,
+    "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
+    "health" : 4,
+    "colors" : [ "Yellow", "White" ],
+    "name" : "Disciple"
+  }, {
+    "mana" : 2,
+    "attackDamage" : 8,
+    "description" : "Standard card: Trained by the best, nothing will catch him off-guard.",
+    "health" : 2,
+    "colors" : [ "Black", "Grey", "Blue" ],
+    "name" : "Sentinel"
+  } ] ]
+}, {
+  "command" : "getCardsInHand",
+  "playerIdx" : 1,
+  "output" : [ {
+    "mana" : 2,
+    "attackDamage" : 6,
+    "description" : "Standard card: A drink can always be served, with the blood of his enemies.",
+    "health" : 1,
+    "colors" : [ "Purple", "Yellow" ],
+    "name" : "Berserker"
+  } ]
+}, {
+  "command" : "getCardsInHand",
+  "playerIdx" : 2,
+  "output" : [ ]
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 1,
+  "output" : 1
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 1,
+    "attackDamage" : 5,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 4,
+    "colors" : [ "Orange", "Red", "Black" ],
+    "name" : "The Ripper"
+  },
+  "x" : 1,
+  "y" : 0
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 2
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 2,
+    "attackDamage" : 5,
+    "description" : "Standard card: When he is near, close your eyes. They betray your mind.",
+    "health" : 4,
+    "colors" : [ "Red", "Black" ],
+    "name" : "Miraj"
+  },
+  "x" : 2,
+  "y" : 0
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 1,
+    "attackDamage" : 5,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 4,
+    "colors" : [ "Orange", "Red", "Black" ],
+    "name" : "The Ripper"
+  },
+  "x" : 1,
+  "y" : 0
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 2,
+  "output" : 1
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 1,
+    "attackDamage" : 3,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 4,
+    "colors" : [ "Orange", "Red", "Black" ],
+    "name" : "The Ripper"
+  },
+  "x" : 1,
+  "y" : 0
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 2
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 1,
+    "attackDamage" : 3,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 4,
+    "colors" : [ "Orange", "Red", "Black" ],
+    "name" : "The Ripper"
+  },
+  "x" : 1,
+  "y" : 0
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 2,
+    "attackDamage" : 3,
+    "description" : "Standard card: When he is near, close your eyes. They betray your mind.",
+    "health" : 5,
+    "colors" : [ "Red", "Black" ],
+    "name" : "Miraj"
+  },
+  "x" : 2,
+  "y" : 0
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 1,
+    "attackDamage" : 3,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 6,
+    "colors" : [ "Orange", "Red", "Black" ],
+    "name" : "The Ripper"
+  },
+  "x" : 1,
+  "y" : 0
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 2,
+    "attackDamage" : 3,
+    "description" : "Standard card: When he is near, close your eyes. They betray your mind.",
+    "health" : 8,
+    "colors" : [ "Red", "Black" ],
+    "name" : "Miraj"
+  },
+  "x" : 2,
+  "y" : 0
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 2,
+  "output" : 11
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 2
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 1,
+  "output" : 10
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 2
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 2,
+  "output" : 17
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 1,
+  "output" : 17
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 1,
+    "attackDamage" : 3,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 8,
+    "colors" : [ "Orange", "Red", "Black" ],
+    "name" : "The Ripper"
+  },
+  "x" : 1,
+  "y" : 0
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 2,
+  "output" : 21
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 1,
+  "output" : 20
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 2,
+    "attackDamage" : 3,
+    "description" : "Standard card: When he is near, close your eyes. They betray your mind.",
+    "health" : 11,
+    "colors" : [ "Red", "Black" ],
+    "name" : "Miraj"
+  },
+  "x" : 2,
+  "y" : 0
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 1,
+    "attackDamage" : 2,
+    "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
+    "health" : 1,
+    "colors" : [ "Green", "Yellow", "Blue" ],
+    "name" : "Disciple"
+  },
+  "x" : 0,
+  "y" : 0
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 2,
+    "attackDamage" : 3,
+    "description" : "Standard card: When he is near, close your eyes. They betray your mind.",
+    "health" : 11,
+    "colors" : [ "Red", "Black" ],
+    "name" : "Miraj"
+  },
+  "x" : 2,
+  "y" : 0
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 1,
+  "output" : 40
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 1,
+    "attackDamage" : 2,
+    "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
+    "health" : 3,
+    "colors" : [ "Green", "Yellow", "Blue" ],
+    "name" : "Disciple"
+  },
+  "x" : 0,
+  "y" : 0
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 2,
+  "output" : 44
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 2
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 1,
+  "output" : 47
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "mana" : 1,
+    "attackDamage" : 2,
+    "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
+    "health" : 3,
+    "colors" : [ "Green", "Yellow", "Blue" ],
+    "name" : "Disciple"
+  },
+  "x" : 0,
+  "y" : 0
+}, {
+  "command" : "getFrozenCardsOnTable",
+  "output" : [ ]
+}, {
+  "gameEnded" : "Player one killed the enemy hero."
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 1,
+  "output" : 54
+}, {
+  "command" : "getPlayerMana",
+  "playerIdx" : 2,
+  "output" : 64
+}, {
+  "command" : "getCardsOnTable",
+  "output" : [ [ {
+    "mana" : 1,
+    "attackDamage" : 2,
+    "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
+    "health" : 3,
+    "colors" : [ "Green", "Yellow", "Blue" ],
+    "name" : "Disciple"
+  }, {
+    "mana" : 1,
+    "attackDamage" : 7,
+    "description" : "Premium card: Fear him. Your last breath is now.",
+    "health" : 1,
+    "colors" : [ "Purple", "Yellow" ],
+    "name" : "Berserker"
+  }, {
+    "mana" : 1,
+    "attackDamage" : 1,
+    "description" : "Premium card: The will of Gods has been spoken, obey and you shall be saved...or not.",
+    "health" : 4,
+    "colors" : [ "Green", "Yellow", "Blue" ],
+    "name" : "Disciple"
+  }, {
+    "mana" : 1,
+    "attackDamage" : 1,
+    "description" : "Premium card: Nobody suspects an outcast, not even the Gods.",
+    "health" : 1,
+    "colors" : [ "Black", "White", "Red" ],
+    "name" : "The Cursed One"
+  }, {
+    "mana" : 1,
+    "attackDamage" : 6,
+    "description" : "Premium card: Fear him. Your last breath is now.",
+    "health" : 2,
+    "colors" : [ "Red", "Blue", "Pink" ],
+    "name" : "Berserker"
+  } ], [ {
+    "mana" : 1,
+    "attackDamage" : 4,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 10,
+    "colors" : [ "Orange", "Red", "Black" ],
+    "name" : "The Ripper"
+  }, {
+    "mana" : 2,
+    "attackDamage" : 5,
+    "description" : "Standard card: Death incarnate. No better time to die than now.",
+    "health" : 4,
+    "colors" : [ "Orange", "Red", "Black" ],
+    "name" : "The Ripper"
+  } ], [ {
+    "mana" : 2,
+    "attackDamage" : 3,
+    "description" : "Standard card: When he is near, close your eyes. They betray your mind.",
+    "health" : 8,
+    "colors" : [ "Red", "Black" ],
+    "name" : "Miraj"
+  }, {
+    "mana" : 1,
+    "attackDamage" : 5,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 8,
+    "colors" : [ "Orange", "Red", "Black" ],
+    "name" : "The Ripper"
+  }, {
+    "mana" : 1,
+    "attackDamage" : 5,
+    "description" : "Standard card: When he is near, close your eyes. They betray your mind.",
+    "health" : 9,
+    "colors" : [ "Yellow", "Orange", "Red" ],
+    "name" : "Miraj"
+  }, {
+    "mana" : 2,
+    "attackDamage" : 7,
+    "description" : "Premium card: You shall not pass, you shall not prevail, you shall perish.",
+    "health" : 8,
+    "colors" : [ "Black", "White", "Green" ],
+    "name" : "Warden"
+  }, {
+    "mana" : 2,
+    "attackDamage" : 6,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 7,
+    "colors" : [ "Black", "Yellow" ],
+    "name" : "The Ripper"
+  } ], [ {
+    "mana" : 2,
+    "attackDamage" : 6,
+    "description" : "Premium card: His presence is not known even by ghosts, success at all costs.",
+    "health" : 3,
+    "colors" : [ "Black", "White" ],
+    "name" : "Sentinel"
+  }, {
+    "mana" : 2,
+    "attackDamage" : 0,
+    "description" : "Standard card: Thrown from the highest cliff, revenge will be his glory.",
+    "health" : 4,
+    "colors" : [ "Black", "White", "Red" ],
+    "name" : "The Cursed One"
+  }, {
+    "mana" : 1,
+    "attackDamage" : 0,
+    "description" : "Premium card: Nobody suspects an outcast, not even the Gods.",
+    "health" : 2,
+    "colors" : [ "Pink", "Purple" ],
+    "name" : "The Cursed One"
+  } ] ]
+}, {
+  "command" : "getCardsInHand",
+  "playerIdx" : 1,
+  "output" : [ {
+    "mana" : 1,
+    "attackDamage" : 7,
+    "description" : "Standard card: He has seen everything, his mind has never been asleep since the making of the realm.",
+    "health" : 5,
+    "colors" : [ "Brown", "Blue" ],
+    "name" : "Warden"
+  }, {
+    "mana" : 1,
+    "attackDamage" : 5,
+    "description" : "Premium card: Insanity is always an option, now it is an absolute.",
+    "health" : 4,
+    "colors" : [ "Yellow", "Orange", "Red" ],
+    "name" : "Miraj"
+  } ]
+}, {
+  "command" : "getCardsInHand",
+  "playerIdx" : 2,
+  "output" : [ ]
+}, {
+  "command" : "getPlayerOneWins",
+  "output" : 2
+}, {
+  "command" : "getPlayerTwoWins",
+  "output" : 0
+}, {
+  "command" : "getTotalGamesPlayed",
+  "output" : 2
+} ]

@@ -10,14 +10,23 @@ public class Game {
     private GameBoard gameBoard;
     private int round;
     private int startingPlayer;
-
+    public static final int ROUND_LIMIT = 10;
+    public static final int THIRD = 3;
+    public static final int SECOND = 2;
+    public static final int FIRST = 1;
+    public static final int ROWS = 4;
     public Game() {
 
     }
 
-    public Game(long shuffleSeed, Player player1, Player player2,
-                int playerOneDeckIdx, int playerTwoDeckIdx, Hero playerOneHero, Hero playerTwoHero,
-                ArrayList<Deck> playerOneDecks, ArrayList<Deck> playerTwoDecks) {
+    public Game(final long shuffleSeed, final Player player1,
+                final Player player2,
+                final int playerOneDeckIdx,
+                final int playerTwoDeckIdx,
+                final Hero playerOneHero,
+                final Hero playerTwoHero,
+                final ArrayList<Deck> playerOneDecks,
+                final ArrayList<Deck> playerTwoDecks) {
         this.gameBoard = new GameBoard(player1, player2);
         this.round = 1;
         gameBoard.getPlayer1().setMana(1);
@@ -32,27 +41,37 @@ public class Game {
         gameBoard.getPlayer2().takeCardInHand();
     }
 
-
-    public void setTurnForPlayer(int playerIdx) {
+    /**
+     *
+     * @param playerIdx indicates the player to whom the turn will be assigned
+     */
+    public final void setTurnForPlayer(final int playerIdx) {
         if (playerIdx == 1) {
             gameBoard.getPlayer1().setTurn(true);
-        } else gameBoard.getPlayer2().setTurn(true);
+        } else {
+            gameBoard.getPlayer2().setTurn(true);
+        }
     }
 
-    public void endTurn() {
+    /**
+     * Method that ends a turn for the current player.
+     * If the turn returns to the first player who started the game,
+     * the round will be incremented.
+     */
+    public final void endTurn() {
         int playerIdx = gameBoard.getTurn();
         if (playerIdx != startingPlayer) {
             gameBoard.getPlayer1().getHero().setUsed(false);
             gameBoard.getPlayer2().getHero().setUsed(false);
-            for(ArrayList<Card> row: gameBoard.getBoard()) {
+            for (ArrayList<Card> row: gameBoard.getBoard()) {
                 for (Card card: row) {
                     card.setUsed(false);
                 }
             }
-            if (round >= 10) {
+            if (round >= ROUND_LIMIT) {
                 round++;
-                gameBoard.getPlayer1().setMana(gameBoard.getPlayer1().getMana() + 10);
-                gameBoard.getPlayer2().setMana(gameBoard.getPlayer2().getMana() + 10);
+                gameBoard.getPlayer1().setMana(gameBoard.getPlayer1().getMana() + ROUND_LIMIT);
+                gameBoard.getPlayer2().setMana(gameBoard.getPlayer2().getMana() + ROUND_LIMIT);
                 gameBoard.getPlayer1().takeCardInHand();
                 gameBoard.getPlayer2().takeCardInHand();
             } else {
@@ -66,31 +85,38 @@ public class Game {
         if (playerIdx == 1) {
             gameBoard.getPlayer1().setTurn(false);
             gameBoard.getPlayer2().setTurn(true);
-            for (Card card: gameBoard.getBoard().get(3)) {
+            for (Card card: gameBoard.getBoard().get(THIRD)) {
                 card.setFrozen(false);
             }
-            for (Card card: gameBoard.getBoard().get(2)) {
+            for (Card card: gameBoard.getBoard().get(SECOND)) {
                 card.setFrozen(false);
             }
-        }
-        else {
+        } else {
             gameBoard.getPlayer2().setTurn(false);
             gameBoard.getPlayer1().setTurn(true);
             for (Card card: gameBoard.getBoard().get(0)) {
                 card.setFrozen(false);
             }
-            for (Card card: gameBoard.getBoard().get(1)) {
+            for (Card card: gameBoard.getBoard().get(FIRST)) {
                 card.setFrozen(false);
             }
         }
 
     }
 
-    public void getPlayerTurn(ArrayNode output, ObjectMapper objectMapper) {
+    /**
+     *
+     * @param output the array where the method will add the output
+     * @param objectMapper ObjectMapper object, used for methods like:
+     *                     createObjectNode(), createArrayNode()
+     */
+    public final void getPlayerTurn(final ArrayNode output, final ObjectMapper objectMapper) {
         int playerIdx;
         if (gameBoard.getPlayer1().isPlayerTurn()) {
             playerIdx = 1;
-        } else playerIdx = 2;
+        } else {
+            playerIdx = 2;
+        }
         ObjectNode playerTurnNode = objectMapper.createObjectNode();
         playerTurnNode.put("command", "getPlayerTurn");
         playerTurnNode.put("output", playerIdx);
@@ -98,16 +124,28 @@ public class Game {
 
     }
 
-    public void getPlayerDeck(ArrayNode output, ObjectMapper objectMapper, int playerIdx) {
+    /**
+     * Method that outputs the deck of the player
+     * with index "playerIdx"
+     * @param output the array where the method will add the output
+     * @param objectMapper ObjectMapper object, used for methods like:
+     *                      createObjectNode(), createArrayNode()
+     * @param playerIdx indicates the player whose deck will be shown by the method
+     */
+    public final void getPlayerDeck(final ArrayNode output,
+                                    final ObjectMapper objectMapper,
+                                    final int playerIdx) {
         Player player;
         if (playerIdx == 1) {
             player = gameBoard.getPlayer1();
-        } else player = gameBoard.getPlayer2();
+        } else  {
+            player = gameBoard.getPlayer2();
+        }
         ObjectNode deckNode = objectMapper.createObjectNode();
         deckNode.put("command", "getPlayerDeck");
         deckNode.put("playerIdx", playerIdx);
         ArrayNode deckArray = objectMapper.createArrayNode();
-        for (Card card: player.getDeck().cards) {
+        for (Card card: player.getDeck().getCards()) {
             if (card == null) {
                 break;
             }
@@ -127,11 +165,23 @@ public class Game {
         output.add(deckNode);
     }
 
-    public void getPlayerHero(ArrayNode output, ObjectMapper objectMapper, int playerIdx) {
+    /**
+     * Method that outputs the hero of the player
+     * with index "playerIdx"
+     * @param output the array where the method will add the output
+     * @param objectMapper ObjectMapper object, used for methods like:
+     *                      createObjectNode(), createArrayNode()
+     * @param playerIdx indicates the player whose hero will be shown by the method
+     */
+    public final void getPlayerHero(final ArrayNode output,
+                                    final ObjectMapper objectMapper,
+                                    final int playerIdx) {
         Player player;
         if (playerIdx == 1) {
             player = gameBoard.getPlayer1();
-        } else player = gameBoard.getPlayer2();
+        } else {
+            player = gameBoard.getPlayer2();
+        }
         ObjectNode heroNode = objectMapper.createObjectNode();
         heroNode.put("command", "getPlayerHero");
         heroNode.put("playerIdx", playerIdx);
@@ -148,12 +198,22 @@ public class Game {
         output.add(heroNode);
     }
 
-    /* Method that place card on the game board, in case of error, it writes the error in output*/
+    /**
+     * Method that place card on the game board,
+     * in case of error, it writes the error in output
+     * @param playerIdx the index of the current player
+     * @param cardIdx the index of card that will be placed on table
+     * @param output the array where the method will add the output
+     * @param objectMapper ObjectMapper object, used for methods like:
+     *                     createObjectNode(), createArrayNode()
+     */
 
-    public void placeCardOnGameBoard(int playerIdx, int cardIdx, ArrayNode output, ObjectMapper objectMapper) {
+    public final void placeCardOnGameBoard(final int playerIdx,
+                                           final int cardIdx,
+                                           final ArrayNode output,
+                                           final ObjectMapper objectMapper) {
 
         String error = gameBoard.placeCard(playerIdx, cardIdx);
-        System.out.println(error);
         if (error != null) {
             ObjectNode errorNode = objectMapper.createObjectNode();
             errorNode.put("command", "placeCard");
@@ -163,15 +223,28 @@ public class Game {
         }
     }
 
-    public GameBoard getGameBoard() {
+    public final GameBoard getGameBoard() {
         return gameBoard;
     }
 
-    public void getPlayerHand(int playerIdx, ArrayNode output, ObjectMapper objectMapper) {
+    /**
+     * Method that outputs the hand of the player
+     * with index "playerIdx"
+     *
+     * @param playerIdx indicates the player
+     * @param output the array where the method will add the output
+     * @param objectMapper ObjectMapper object, used for methods like:
+     *                     createObjectNode(), createArrayNode()
+     */
+    public final void getPlayerHand(final int playerIdx,
+                                    final ArrayNode output,
+                                    final ObjectMapper objectMapper) {
         Player player;
         if (playerIdx == 1) {
             player = gameBoard.getPlayer1();
-        } else player = gameBoard.getPlayer2();
+        } else {
+            player = gameBoard.getPlayer2();
+        }
         ObjectNode handNode = objectMapper.createObjectNode();
         handNode.put("command", "getCardsInHand");
         handNode.put("playerIdx", playerIdx);
@@ -196,14 +269,23 @@ public class Game {
         output.add(handNode);
     }
 
-    public void getPlayerMana(int playerIdx, ArrayNode output, ObjectMapper objectMapper) {
+    /**
+     * Method that outputs the mana of the player with
+     * index "playerIdx"
+     * @param playerIdx indicates the player
+     * @param output the array where the method will add the output
+     * @param objectMapper ObjectMapper object, used for methods like:
+     *                     createObjectNode(), createArrayNode()
+     */
+    public final void getPlayerMana(final int playerIdx,
+                                    final ArrayNode output,
+                                    final ObjectMapper objectMapper) {
         Player player;
         if (playerIdx == 1) {
             player = gameBoard.getPlayer1();
-        } else if  (playerIdx == 2) {
+        } else {
             player = gameBoard.getPlayer2();
         }
-        else return;
         ObjectNode manaNode = objectMapper.createObjectNode();
         manaNode.put("command", "getPlayerMana");
         manaNode.put("playerIdx", playerIdx);
@@ -212,11 +294,18 @@ public class Game {
         output.add(manaNode);
     }
 
-    public void getCardsOnTable(ArrayNode output, ObjectMapper objectMapper) {
+    /**
+     * Method that outputs all the cards placed on the table
+     * @param output the array where the method will add the output
+     * @param objectMapper ObjectMapper object, used for methods like:
+     *                     createObjectNode(), createArrayNode()
+     */
+    public final void getCardsOnTable(final ArrayNode output,
+                                      final ObjectMapper objectMapper) {
         ObjectNode tableNode = objectMapper.createObjectNode();
         tableNode.put("command", "getCardsOnTable");
         ArrayNode tableArray = objectMapper.createArrayNode();
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < ROWS; i++) {
             ArrayNode rowArray = objectMapper.createArrayNode();
             if (gameBoard.getBoard().get(i).size() == 0) {
                 tableArray.add(rowArray);
@@ -241,8 +330,25 @@ public class Game {
         output.add(tableNode);
     }
 
-    public void cardUsesAttack(int xAttacker, int yAttacker, int xAttacked, int yAttacked, ArrayNode output, ObjectMapper objectMapper) {
-        String error = gameBoard.cardAttack(xAttacker, yAttacker, xAttacked, yAttacked);
+    /**
+     * Method that is used for the command "cardUsesAttack".
+     * In case of error, it will output an error message.
+     * @param xAttacker the coordinate "x" of the attacker's card
+     * @param yAttacker the coordinate "y" of the attacker's card
+     * @param xAttacked the coordinate "x" of the attacked card
+     * @param yAttacked the coordinate "y" of the attacked card
+     * @param output the array where the method will add the output
+     * @param objectMapper ObjectMapper object, used for methods like:
+     *                     createObjectNode(), createArrayNode()
+     */
+    public final void cardUsesAttack(final int xAttacker,
+                                     final int yAttacker,
+                                     final int xAttacked,
+                                     final int yAttacked,
+                                     final ArrayNode output,
+                                     final ObjectMapper objectMapper) {
+        String error = gameBoard.cardAttack(xAttacker, yAttacker,
+                                            xAttacked, yAttacked);
         if (error != null) {
             ObjectNode errorNode = objectMapper.createObjectNode();
             errorNode.put("command", "cardUsesAttack");
@@ -259,7 +365,19 @@ public class Game {
         }
     }
 
-    public void getCardAtPosition(int x, int y, ArrayNode output, ObjectMapper objectMapper) {
+    /**
+     * Method that outputs the card at the position (x,y)
+     * @param x the coordinate "x" of the card
+     * @param y the coordinate "y" of the card
+     * @param output the array where the method will add the output
+     * @param objectMapper ObjectMapper object, used for methods like:
+     *                     createObjectNode(), createArrayNode()
+     */
+
+    public final void getCardAtPosition(final int x,
+                                        final int y,
+                                        final ArrayNode output,
+                                        final ObjectMapper objectMapper) {
         String out = gameBoard.getCardAtPosition(x, y);
         ObjectNode outputNode = objectMapper.createObjectNode();
         if (out != null) {
@@ -267,8 +385,7 @@ public class Game {
             outputNode.put("output", out);
             outputNode.put("x", x);
             outputNode.put("y", y);
-        }
-        else {
+        } else {
             outputNode.put("command", "getCardAtPosition");
             ObjectNode cardNode = objectMapper.createObjectNode();
             cardNode.put("mana", gameBoard.getBoard().get(x).get(y).getMana());
@@ -287,8 +404,24 @@ public class Game {
         output.add(outputNode);
     }
 
-    public void cardUsesAbility(int xAttacker, int yAttacker, int xAttacked, int yAttacked, ArrayNode output, ObjectMapper objectMapper) {
-        String error = gameBoard.useAbility(xAttacker, yAttacker, xAttacked, yAttacked);
+    /**
+     * Method that is used for the "cardUsesAbility" command
+     * @param xAttacker the coordinate "x" of the attacker's card
+     * @param yAttacker the coordinate "y" of the attacker's card
+     * @param xAttacked the coordinate "x" of the attacked card
+     * @param yAttacked the coordinate "y" of the attacked card
+     * @param output the array where the method will add the output
+     * @param objectMapper ObjectMapper object, used for methods like:
+     *                     createObjectNode(), createArrayNode()
+     */
+    public final void cardUsesAbility(final int xAttacker,
+                                      final int yAttacker,
+                                      final int xAttacked,
+                                      final int yAttacked,
+                                      final ArrayNode output,
+                                      final ObjectMapper objectMapper) {
+        String error = gameBoard.useAbility(xAttacker, yAttacker,
+                                            xAttacked, yAttacked);
         if (error != null) {
             ObjectNode errorNode = objectMapper.createObjectNode();
             errorNode.put("command", "cardUsesAbility");
@@ -305,17 +438,27 @@ public class Game {
         }
     }
 
-    public void useAttackHero(int x, int y, ArrayNode output, ObjectMapper objectMapper) {
+    /**
+     * Method that is used for the "useAttackHero" command
+     * @param x the coordinate "x" of the card that attacks
+     * @param y the coordinate "y" of the card that attacks
+     * @param output the array where the method will add the output
+     * @param objectMapper ObjectMapper object, used for methods like:
+     *                     createObjectNode(), createArrayNode()
+     */
+    public final void useAttackHero(final int x,
+                                    final int y,
+                                    final ArrayNode output,
+                                    final ObjectMapper objectMapper) {
         String out = gameBoard.cardAttacksHero(x, y);
-        System.out.println("output: " + out);
         if (out != null) {
-            if (out.equals("Player one killed the enemy hero.") || out.equals("Player two killed the enemy hero.")) {
+            if (out.equals("Player one killed the enemy hero.")
+                    || out.equals("Player two killed the enemy hero.")) {
                 ObjectNode gameEndedNode = objectMapper.createObjectNode();
                 gameEndedNode.put("gameEnded", out);
                 output.add(gameEndedNode);
 
-            }
-            else {
+            } else {
                 ObjectNode errorNode = objectMapper.createObjectNode();
                 errorNode.put("command", "useAttackHero");
                 ObjectNode coordsNode = objectMapper.createObjectNode();
@@ -329,7 +472,16 @@ public class Game {
 
     }
 
-    public void useHeroAbility(int affectedRow, ArrayNode output, ObjectMapper objectMapper) {
+    /**
+     * Method that is used for the "useHeroAbility" command
+     * @param affectedRow the row that will be affected by the hero's ability
+     * @param output the array where the method will add the output
+     * @param objectMapper ObjectMapper object, used for methods like:
+     *                     createObjectNode(), createArrayNode()
+     */
+    public final void useHeroAbility(final int affectedRow,
+                                     final ArrayNode output,
+                                     final ObjectMapper objectMapper) {
         String error = gameBoard.heroAbility(affectedRow);
         if (error != null) {
             ObjectNode errorNode = objectMapper.createObjectNode();
@@ -340,12 +492,19 @@ public class Game {
         }
     }
 
-    public void getFrozenCardsOnTable(ArrayNode output, ObjectMapper objectMapper) {
+    /**
+     * Method that outputs the frozen cards on the table
+     * @param output the array where the method will add the output
+     * @param objectMapper ObjectMapper object, used for methods like:
+     *                     createObjectNode(), createArrayNode()
+     */
+    public final void getFrozenCardsOnTable(final ArrayNode output,
+                                            final ObjectMapper objectMapper) {
         ObjectNode frozenNode = objectMapper.createObjectNode();
         frozenNode.put("command", "getFrozenCardsOnTable");
         ArrayNode frozenArray = objectMapper.createArrayNode();
         for (ArrayList<Card> row: gameBoard.getBoard()) {
-            for(Card card: row) {
+            for (Card card: row) {
                 if (card.isFrozen()) {
                     ObjectNode cardNode = objectMapper.createObjectNode();
                     cardNode.put("mana", card.getMana());
@@ -365,21 +524,42 @@ public class Game {
         output.add(frozenNode);
     }
 
-    public void getTotalGamesPlayed(ArrayNode output, ObjectMapper objectMapper) {
+    /**
+     * Method that outputs the total games played in this session
+     * @param output the array where the method will add the output
+     * @param objectMapper ObjectMapper object, used for methods like:
+     *                     createObjectNode(), createArrayNode()
+     */
+    public final void getTotalGamesPlayed(final ArrayNode output,
+                                          final ObjectMapper objectMapper) {
         ObjectNode outputNode = objectMapper.createObjectNode();
         outputNode.put("command", "getTotalGamesPlayed");
         outputNode.put("output", gameBoard.getPlayer1().getStats().getTotalGamesPlayed());
         output.add(outputNode);
     }
 
-    public void getPlayerOneWins(ArrayNode output, ObjectMapper objectMapper) {
+    /**
+     * Method that outputs the playerOne's wins
+     * @param output the array where the method will add the output
+     * @param objectMapper ObjectMapper object, used for methods like:
+     *                     createObjectNode(), createArrayNode()
+     */
+
+    public final void getPlayerOneWins(final ArrayNode output,
+                                       final ObjectMapper objectMapper) {
         ObjectNode winsNode = objectMapper.createObjectNode();
         winsNode.put("command", "getPlayerOneWins");
         winsNode.put("output", gameBoard.getPlayer1().getStats().getWins());
         output.add(winsNode);
     }
-
-    public void getPlayerTwoWins(ArrayNode output, ObjectMapper objectMapper) {
+    /**
+     * Method that outputs the playerTwo's wins
+     * @param output the array where the method will add the output
+     * @param objectMapper ObjectMapper object, used for methods like:
+     *                     createObjectNode(), createArrayNode()
+     */
+    public final void getPlayerTwoWins(final ArrayNode output,
+                                       final ObjectMapper objectMapper) {
         ObjectNode winsNode = objectMapper.createObjectNode();
         winsNode.put("command", "getPlayerTwoWins");
         winsNode.put("output", gameBoard.getPlayer2().getStats().getWins());
@@ -388,15 +568,15 @@ public class Game {
 
 
 
-    public void setStartingPlayer(int startingPlayer) {
+    public final void setStartingPlayer(final int startingPlayer) {
         this.startingPlayer = startingPlayer;
     }
 
-    public int getStartingPlayer() {
+    public final int getStartingPlayer() {
         return startingPlayer;
     }
 
-    public int getRound() {
+    public final int getRound() {
         return round;
     }
 }

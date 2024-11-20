@@ -27,13 +27,13 @@ class Stats {
         totalGamesPlayed++;
     }
 }
-public class Player {
+public final class Player {
     private Stats stats;
     private int mana;
     private Hero hero;
     private ArrayList<Card> hand;
     private Deck deck;
-    boolean turn;
+    private boolean turn;
 
     Player() {
         stats = new Stats();
@@ -44,7 +44,7 @@ public class Player {
     }
 
 
-    Player(Hero hero, Deck deck) {
+    Player(final Hero hero, final Deck deck) {
         this.deck = deck;
         this.hero = hero;
         this.mana = 1;
@@ -57,10 +57,13 @@ public class Player {
         return mana;
     }
 
-    public void setMana(int mana) {
+    public void setMana(final int mana) {
         this.mana = mana;
     }
 
+    /**
+     * method that adds a card to a player's hand
+     */
     public void takeCardInHand() {
         if (deck.isEmpty()) {
             return;
@@ -68,7 +71,14 @@ public class Player {
         hand.add(deck.drawCard());
     }
 
-    public Card getHandCardIdx(int idx) {
+    /**
+     * Method that returns the card from the hand at the specified index.
+     * In case of an empty deck, the function will return null.
+     * @param idx the index of the card to return
+     * @return the card from the hand at the specified index,
+     * or null if the deck is empty"
+     */
+    public Card getHandCardIdx(final int idx) {
         if (deck.isEmpty()) {
             return null;
         }
@@ -92,24 +102,32 @@ public class Player {
         return stats;
     }
 
+    /**
+     * Method that indicates if it is the player's turn
+     * @return the turn field
+     */
     boolean isPlayerTurn() {
         return turn;
     }
-    void setTurn(boolean turn) {
+    void setTurn(final boolean turn) {
         this.turn = turn;
     }
 
-    public void setDeck(Deck deck) {
+    public void setDeck(final Deck deck) {
         this.deck = deck;
     }
 
-    public void setHero(Hero hero) {
+    public void setHero(final Hero hero) {
         this.hero = hero;
     }
 
-    public void setHand(ArrayList<Card> hand) {
+    public void setHand(final ArrayList<Card> hand) {
         this.hand = hand;
     }
+
+    /**
+     * Method that reset the player after the game has ended
+     */
     public void resetPlayer() {
         this.mana = 0;
         this.hand.clear();
@@ -117,7 +135,7 @@ public class Player {
 
     }
 
-    public void setStats(Stats stats) {
+    public void setStats(final Stats stats) {
         this.stats = stats;
     }
 

@@ -2,7 +2,7 @@ package org.poo.game;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Collections;
-import org.poo.fileio.*;
+import org.poo.fileio.CardInput;
 
 public class Card {
     private final int mana;
@@ -10,11 +10,11 @@ public class Card {
     private int attackDamage;
     private final String description;
     private ArrayList<String> colors;
-    public final String name;
+    private final String name;
     protected boolean frozen;
     private boolean used;
 
-    public Card(CardInput card) {
+    public Card(final CardInput card) {
         this.mana = card.getMana();
         this.attackDamage = card.getAttackDamage();
         this.health = card.getHealth();
@@ -25,8 +25,10 @@ public class Card {
         this.used = false;
 
     }
-    public Card(int mana, int health, int attackDamage,
-         String description, ArrayList<String> colors, String name) {
+    public Card(final int mana, final int health,
+                final int attackDamage,
+                final String description, final ArrayList<String> colors,
+                final String name) {
         this.mana = mana;
         this.health = health;
         this.attackDamage = attackDamage;
@@ -91,7 +93,7 @@ public class Card {
      * Setter for the health field
      * @param health the health value to be set for the health field
      */
-    public void setHealth(int health) {
+    public void setHealth(final int health) {
         this.health = health;
     }
 
@@ -100,32 +102,34 @@ public class Card {
      * @param attackDamage the AD value to be set for the AD field
      */
 
-    public void setAttackDamage(int attackDamage) {
+    public void setAttackDamage(final int attackDamage) {
         this.attackDamage = attackDamage;
     }
 
-    public boolean isFrozen() {
+    public final boolean isFrozen() {
         return frozen;
     }
 
-    public boolean isUsed() {
+    public final boolean isUsed() {
         return used;
     }
 
-    public void setUsed(boolean used) {
+    public final void setUsed(final boolean used) {
         this.used = used;
     }
 
-    public void setFrozen(boolean frozen) {
+    public final void setFrozen(final boolean frozen) {
         this.frozen = frozen;
     }
 
-    public boolean isFrontRowCard() {
-        return (name.equals("Warden") || name.equals("Goliath") ||
-                name.equals("The Ripper") || name.equals("Miraj"));
+    public final boolean isFrontRowCard() {
+        return (name.equals("Warden")
+                || name.equals("Goliath")
+                || name.equals("The Ripper")
+                || name.equals("Miraj"));
     }
 
-    public boolean isTank() {
+    public final boolean isTank() {
         return (name.equals("Warden") || name.equals("Goliath"));
     }
 }
@@ -134,17 +138,22 @@ class Hero extends Card {
 
     // A hero cannot be frozen, so it is initialized to false and remains final
     private final boolean frozen;
+    public static final int HERO_HEALTH = 30;
 
-    public Hero(int mana, int health, int attackDamage, String description, ArrayList<String> colors, String name) {
-        super(mana, 30, 0, description, colors, name);
+    Hero(final int mana, final int health,
+                final int attackDamage,
+                final String description,
+                final ArrayList<String> colors,
+                final String name) {
+        super(mana, HERO_HEALTH, 0, description, colors, name);
         this.frozen = false;
         this.setUsed(false);
     }
 
 
-    public Hero(CardInput card) {
+     Hero(final CardInput card) {
         super(card);
-        this.setHealth(30);
+        this.setHealth(HERO_HEALTH);
         this.frozen = false;
     }
 
@@ -158,26 +167,26 @@ class Hero extends Card {
 }
 
 class Deck {
-    ArrayList<Card> cards;
+    private final ArrayList<Card> cards;
 
-    Deck(ArrayList<CardInput> cardsInput) {
-        ArrayList<Card> cards = new ArrayList<Card>();
+    Deck(final ArrayList<CardInput> cardsInput) {
+        ArrayList<Card> cardsList = new ArrayList<>();
         for (CardInput cardInput: cardsInput) {
-            cards.add(new Card(cardInput));
+            cardsList.add(new Card(cardInput));
         }
-        this.cards = cards;
+        this.cards = cardsList;
     }
 
-    public void shuffle(long seed) {
+    public void shuffle(final long seed) {
         Random random = new Random(seed);
         Collections.shuffle(cards, random);
     }
 
-    public void addCardInDeck(Card card) {
+    public void addCardInDeck(final Card card) {
         cards.add(card);
     }
 
-    public void removeCardFromDeck(Card card) {
+    public void removeCardFromDeck(final Card card) {
         cards.remove(card);
     }
 
@@ -191,7 +200,8 @@ class Deck {
         return cards.isEmpty();
     }
 
-
-
+    public ArrayList<Card> getCards() {
+        return cards;
+    }
 }
 

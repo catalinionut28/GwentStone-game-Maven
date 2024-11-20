@@ -1,13 +1,26 @@
 package org.poo.game;
-import org.poo.fileio.*;
+import org.poo.fileio.Input;
+import org.poo.fileio.ActionsInput;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 
 import java.util.ArrayList;
 
-public class GameSession {
+public final class GameSession {
+        private GameSession() {
+            System.out.println("Private constructor");
+        }
 
-    public static void startSession(Input inputData, ArrayNode output, ObjectMapper objectMapper) {
+    /**
+     *
+     * @param inputData Input object,that contains the input of the game
+     * @param output ArrayNode object, the "main" array for the output
+     * @param objectMapper ObjectMapper object, used for methods like:
+     *                     createObjectNode(), createArrayNode()
+     */
+
+    public static void startSession(final Input inputData,
+                                        final ArrayNode output, final ObjectMapper objectMapper) {
         /* initialized the game session's players */
         Player player1 = new Player();
         Player player2 = new Player();
@@ -25,24 +38,23 @@ public class GameSession {
             player1.resetPlayer();
             player2.resetPlayer();
             long seed = inputData.getGames().get(i).getStartGame().getShuffleSeed();
-            int playerOneDeckIdx = inputData.getGames().get(i).getStartGame().getPlayerOneDeckIdx();
-            int playerTwoDeckIdx = inputData.getGames().get(i).getStartGame().getPlayerTwoDeckIdx();
-            Hero playerOneHero = new Hero(inputData.getGames().get(i).getStartGame().getPlayerOneHero());
-            Hero playerTwoHero = new Hero(inputData.getGames().get(i).getStartGame().getPlayerTwoHero());
-            int startingPlayer = inputData.getGames().get(i).getStartGame().getStartingPlayer();
-            Game game = new Game(seed, player1, player2, playerOneDeckIdx, playerTwoDeckIdx, playerOneHero, playerTwoHero, playerOneDecks, playerTwoDecks);
+            int playerOneDeckIdx =
+                    inputData.getGames().get(i).getStartGame().getPlayerOneDeckIdx();
+            int playerTwoDeckIdx =
+                    inputData.getGames().get(i).getStartGame().getPlayerTwoDeckIdx();
+            Hero playerOneHero =
+                    new Hero(inputData.getGames().get(i).getStartGame().getPlayerOneHero());
+            Hero playerTwoHero =
+                    new Hero(inputData.getGames().get(i).getStartGame().getPlayerTwoHero());
+            int startingPlayer =
+                    inputData.getGames().get(i).getStartGame().getStartingPlayer();
+            Game game =
+                    new Game(seed, player1, player2, playerOneDeckIdx, playerTwoDeckIdx,
+                            playerOneHero, playerTwoHero, playerOneDecks, playerTwoDecks);
             game.setStartingPlayer(startingPlayer);
             game.setTurnForPlayer(startingPlayer);
-            System.out.println(game.getStartingPlayer());
-            for (Card card: player2.getDeck().cards) {
-                System.out.println("Deck: " + card.getName());
-            }
-            for (Card card: player2.getHand()) {
-                System.out.println("Hand: " + card.getName());
-            }
             for (ActionsInput action: inputData.getGames().get(i).getActions()) {
                 String command = action.getCommand();
-                System.out.println(command + game.getRound());
                 switch (command) {
                     case "getPlayerDeck":
                         game.getPlayerDeck(output, objectMapper, action.getPlayerIdx());
@@ -54,13 +66,13 @@ public class GameSession {
                         game.getPlayerTurn(output, objectMapper);
                         break;
                     case "placeCard":
-                        game.placeCardOnGameBoard(game.getGameBoard().getTurn(), action.getHandIdx(), output, objectMapper);
+                        game.placeCardOnGameBoard(game.getGameBoard().getTurn(),
+                                                action.getHandIdx(), output, objectMapper);
                         break;
                     case "endPlayerTurn":
                         game.endTurn();
                         break;
                     case "getCardsInHand":
-
                         game.getPlayerHand(action.getPlayerIdx(), output, objectMapper);
                         break;
                     case "getCardsOnTable":
@@ -70,18 +82,27 @@ public class GameSession {
                         game.getPlayerMana(action.getPlayerIdx(), output, objectMapper);
                         break;
                     case "cardUsesAttack":
-                        game.cardUsesAttack(action.getCardAttacker().getX(), action.getCardAttacker().getY(),
-                                            action.getCardAttacked().getX(), action.getCardAttacked().getY(), output, objectMapper);
+                        game.cardUsesAttack(action.getCardAttacker().getX(),
+                                            action.getCardAttacker().getY(),
+                                            action.getCardAttacked().getX(),
+                                            action.getCardAttacked().getY(),
+                                            output, objectMapper);
                         break;
                     case "getCardAtPosition":
-                        game.getCardAtPosition(action.getX(), action.getY(), output, objectMapper);
+                        game.getCardAtPosition(action.getX(), action.getY(),
+                                                output, objectMapper);
                         break;
                     case "cardUsesAbility":
-                        game.cardUsesAbility(action.getCardAttacker().getX(), action.getCardAttacker().getY(),
-                                action.getCardAttacked().getX(), action.getCardAttacked().getY(), output, objectMapper);
+                        game.cardUsesAbility(action.getCardAttacker().getX(),
+                                            action.getCardAttacker().getY(),
+                                            action.getCardAttacked().getX(),
+                                            action.getCardAttacked().getY(),
+                                            output, objectMapper);
                         break;
                     case "useAttackHero":
-                        game.useAttackHero(action.getCardAttacker().getX(), action.getCardAttacker().getY(), output, objectMapper);
+                        game.useAttackHero(action.getCardAttacker().getX(),
+                                            action.getCardAttacker().getY(),
+                                            output, objectMapper);
                         break;
                     case "useHeroAbility":
                         game.useHeroAbility(action.getAffectedRow(), output, objectMapper);
@@ -102,8 +123,6 @@ public class GameSession {
                         break;
                 }
             }
-
         }
-
     }
 }

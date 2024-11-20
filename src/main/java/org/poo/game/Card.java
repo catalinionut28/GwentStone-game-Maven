@@ -37,33 +37,68 @@ public class Card {
         used = false;
     }
 
+    /**
+     * Getter for health field
+     * @return the card's health
+     */
     public int getHealth() {
         return health;
     }
 
+    /**
+     * Getter for the name field
+     * @return the card's name
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Getter for the attackDamage field
+     * @return the card's AD
+     */
     public int getAttackDamage() {
         return attackDamage;
     }
+
+    /**
+     * Getter for the description field
+     * @return the card's description
+     */
 
     public String getDescription() {
         return description;
     }
 
+    /**
+     * Getter for the colors field
+     * @return the card's colors
+     */
+
     public ArrayList<String> getColors() {
         return colors;
     }
 
+    /**
+     * Getter for the mana field
+     * @return the card's mana
+     */
     public int getMana() {
         return mana;
     }
 
+    /**
+     * Setter for the health field
+     * @param health the health value to be set for the health field
+     */
     public void setHealth(int health) {
         this.health = health;
     }
+
+    /**
+     * Setter for the attackDamage field
+     * @param attackDamage the AD value to be set for the AD field
+     */
 
     public void setAttackDamage(int attackDamage) {
         this.attackDamage = attackDamage;

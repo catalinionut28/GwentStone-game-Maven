@@ -6,7 +6,6 @@ public class GameBoard {
     private ArrayList<ArrayList<Card>> board;
     private Player player1;
     private Player player2;
-    // array that contains the last index available of each row
 
 
     public GameBoard(Player player1, Player player2) {
@@ -63,9 +62,6 @@ public class GameBoard {
         if (currentPlayer.isPlayerTurn()) {
             if (currentPlayer.getMana() >= currentPlayer.getHand().get(cardIdx).getMana()) {
                 Card card = currentPlayer.getHand().get(cardIdx);
-//                System.out.println(card.getName() + ": " + card.getMana());
-//                System.out.println("Player Turn: " + getTurn());
-//                System.out.println("Player Mana: " + currentPlayer.getMana());
                 if (card.isFrontRowCard()) {
                     if (board.get(front).size() < 5) {
                         board.get(front).add(card);

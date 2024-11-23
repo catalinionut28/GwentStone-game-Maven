@@ -1,0 +1,53 @@
+commit 61231af970465e686eb3d0c498560058c186650b
+Author: Vasile Catalin-Ionut <catalin.vasile2812@stud.acs.upb.ro>
+Date:   Thu Nov 21 01:09:32 2024 +0200
+
+    Uploaded the last version of GameBoard.java
+
+commit 2ff9d1264b23a6453c13749159b34bbaac1d5206
+Author: Vasile Catalin-Ionut <catalin.vasile2812@stud.acs.upb.ro>
+Date:   Thu Nov 21 00:08:37 2024 +0200
+
+    Uploaded the last version of Game.java
+
+commit 73e979033f097bef192a4891176066eae9bf3bec
+Author: Vasile Catalin-Ionut <catalin.vasile2812@stud.acs.upb.ro>
+Date:   Wed Nov 20 20:52:37 2024 +0200
+
+    Uploaded the final version of Card.java
+
+commit 0fdfb766d90f0fdf08e099f9db81593bd1d538b4
+Author: Vasile Catalin-Ionut <catalin.vasile2812@stud.acs.upb.ro>
+Date:   Wed Nov 20 18:51:03 2024 +0200
+
+    Uploaded the final version of Player.java file
+
+commit 3ac6d3a2c477a0c5594112fba3a3db714ab977a3
+Author: Vasile Catalin-Ionut <catalin.vasile2812@stud.acs.upb.ro>
+Date:   Wed Nov 20 18:19:52 2024 +0200
+
+    Added final version of GameSession.java
+
+commit f5e9c95ebd5c99c0e8e9f94492b2ee1799e73f86
+Author: Vasile Catalin-Ionut <catalin.vasile2812@stud.acs.upb.ro>
+Date:   Wed Nov 20 00:10:01 2024 +0200
+
+    Remove .ZoneIdentifier files
+
+commit 196da02639824c6d0be149b15d5e2615fa8a0e98
+Author: Vasile Catalin-Ionut <catalin.vasile2812@stud.acs.upb.ro>
+Date:   Tue Nov 19 00:06:36 2024 +0200
+
+    Switched to the new skel
+
+commit 488e657c4ee3835ff28defa74b1235fcd215a4b3
+Author: Vasile Catalin-Ionut <catalin.vasile2812@stud.acs.upb.ro>
+Date:   Mon Nov 18 23:58:51 2024 +0200
+
+    Switched project structure to new skeleton
+
+commit 182c9660bdae799844437263ee1098826052189f
+Author: Catalin Ionut <catalin.vasile2812@stud.acs.upb.ro>
+Date:   Mon Nov 18 22:19:07 2024 +0200
+
+    Initial commit
